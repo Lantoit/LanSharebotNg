@@ -13,3 +13,41 @@ I've added a filament runout sensor.
 I'm try to add a bltouch sensor.
 
 
+// Config NG Sharebot 1 estruder.
+
+// 00-01
+// Some hw changed made (FTX PSU -NB - endstop X and Y reverted to original (Sharebot standard) Photo Giaupau gioloky MauroB
+// + S_CURVE_ACCELERATION          
+// + PSU_CONTROL                    // Printer shutdown +12V after print (ATX-FTX PSU needed!)
+// + HOST_KEEPALIVE_FEATURE         // Disable this if your host doesn't like keepalive messages
+// + BUSY_WHILE_HEATING             // Some hosts require "busy" messages even during heating
+// Serial Speed rised to 115200 to 250k (Octoprint) - 500k (Pc connection)
+// 03
+// + NOZZLE_PARK_FEATURE  
+// + NO_MOTION_BEFORE_HOMING
+// + UNKNOWN_Z_NO_RAISE       
+// 04
+// + MESH_BED_LEVELING
+// + G26_MESH_VALIDATION
+// + LEVEL_BED_CORNERS
+// 04-02
+// + FILAMENT_RUNOUT_SENSOR        
+// + FIL_RUNOUT_PIN    32  
+// + FIL_RUNOUT_INVERTING true (instead false)
+// > POWER_TIMEOUT from 30 to 300
+// Config ADV
+// 00-01
+// + ADAPTIVE_FAN_SLOWING              // Slow part cooling fan if temperature drops Enabled By Leo
+// + WATCH_TEMP_PERIOD 80              // (To be reduced!)
+// + WATCH_TEMP_INCREASE 4             // (To be reduced!)
+// + FAN_MAX_PWM
+// + FAN_MIN_PWM
+// + E0_AUTO_FAN_PIN 8                //I use FAN pin 8 to cool down the ESTRUDER MOTOR!!
+// 03
+// + HOST_ACTION_COMMANDS              
+// + HOST_PROMPT_SUPPORT               
+// + ADVANCED_PAUSE_FEATURE  
+// + HOME_BEFORE_FILAMENT_CHANGE           // Ensure homing has been completed prior to parking for filament change
+// Remove since now 
+// Original sharebot leveling
+// Original Sharebot filament change
