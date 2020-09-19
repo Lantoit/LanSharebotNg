@@ -10,7 +10,7 @@ The original PSU was dead, I've changed it with a FTX PSU (from a dead 1U server
 
 I've added a filament runout sensor.
 
-I'm try to add a bltouch sensor.
+I'm trying to add a bltouch sensor.
 
 
 // Config NG Sharebot 1 estruder.
