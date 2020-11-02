@@ -623,7 +623,7 @@
 // Specify here all the endstop connectors that are connected to any endstop or probe.
 // Almost all printers will be using one per axis. Probes will use one or more of the
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
-#define USE_XMIN_PLUG 
+ #define USE_XMIN_PLUG 
 // #define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG //Sharebot
 #define USE_XMAX_PLUG //Sharebot
@@ -631,15 +631,15 @@
 #define USE_ZMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
-#define ENDSTOPPULLUPS
+//#define ENDSTOPPULLUPS
 #if DISABLED(ENDSTOPPULLUPS)
   // Disable ENDSTOPPULLUPS to set pullups individually
-  //#define ENDSTOPPULLUP_XMAX
-  //#define ENDSTOPPULLUP_YMAX
+  #define ENDSTOPPULLUP_XMAX
+  #define ENDSTOPPULLUP_YMAX
   //#define ENDSTOPPULLUP_ZMAX
   //#define ENDSTOPPULLUP_XMIN
   //#define ENDSTOPPULLUP_YMIN
-  //#define ENDSTOPPULLUP_ZMIN
+  #define ENDSTOPPULLUP_ZMIN
   //#define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
@@ -657,13 +657,13 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // From original Sharebot Config
 #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // From original Sharebot Config
 #define X_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // From original Sharebot Config
 #define Y_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // From original Sharebot Config
 #define Z_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // From original Sharebot Config
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
